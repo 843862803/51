@@ -1,0 +1,238 @@
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    01/18/2019  12:07:22  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE Cube888-1.obj TO Cube888-1 RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  Cube888-1.obj (CUBE888_1)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C_STARTUP)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C_INIT)
+
+
+LINK MAP OF MODULE:  Cube888-1 (CUBE888_1)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0008H     UNIT         ?DT?CUBE888_1
+            IDATA   0010H     0040H     UNIT         ?ID?CUBE888_1
+            IDATA   0050H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     0003H     ABSOLUTE     
+                    0006H     0005H                  *** GAP ***
+            CODE    000BH     0003H     ABSOLUTE     
+                    000EH     000DH                  *** GAP ***
+            CODE    001BH     0003H     ABSOLUTE     
+                    001EH     0005H                  *** GAP ***
+            CODE    0023H     0003H     ABSOLUTE     
+            CODE    0026H     B440H     UNIT         ?CO?CUBE888_1
+            CODE    B466H     008CH     UNIT         ?C_C51STARTUP
+            CODE    B4F2H     0054H     UNIT         ?C_INITSEG
+            CODE    B546H     004EH     UNIT         ?PR?MAIN?CUBE888_1
+            CODE    B594H     0045H     UNIT         ?PR?IO_INTERRUPT_UART_INIT?CUBE888_1
+            CODE    B5D9H     003AH     UNIT         ?PR?BUTTON?CUBE888_1
+            CODE    B613H     0036H     UNIT         ?PR?UART_RECEIVE?CUBE888_1
+            CODE    B649H     0023H     UNIT         ?PR?DISPLAY_DELAY?CUBE888_1
+            CODE    B66CH     0022H     UNIT         ?PR?LED_DISPLAY?CUBE888_1
+
+
+
+OVERLAY MAP OF MODULE:   Cube888-1 (CUBE888_1)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?CUBE888_1
+  +--> ?C_INITSEG
+
+?PR?MAIN?CUBE888_1
+  +--> ?PR?IO_INTERRUPT_UART_INIT?CUBE888_1
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  01/18/2019  12:07:22  PAGE 2
+
+
+  +--> ?CO?CUBE888_1
+
+
+
+SYMBOL TABLE OF MODULE:  Cube888-1 (CUBE888_1)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        CUBE888_1
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0092H         PUBLIC        P1M0
+  D:0093H         PUBLIC        P0M1
+  C:B5D9H         PUBLIC        Button
+  D:0091H         PUBLIC        P1M1
+  D:0080H         PUBLIC        P0
+  D:0090H         PUBLIC        P1
+  D:00A0H         PUBLIC        P2
+  D:00B0H         PUBLIC        P3
+  D:00C0H         PUBLIC        P4
+  D:00C8H         PUBLIC        P5
+  B:00A8H.7       PUBLIC        EA
+  D:00E8H         PUBLIC        P6
+  C:B613H         PUBLIC        uart_receive
+  D:0008H         PUBLIC        Mode
+  D:00F8H         PUBLIC        P7
+  C:0026H         PUBLIC        table
+  D:00A8H         PUBLIC        IE
+  C:B66CH         PUBLIC        LED_Display
+  D:0009H         PUBLIC        T1_count
+  D:000AH         PUBLIC        End
+  B:00A8H.4       PUBLIC        ES
+  D:00B8H         PUBLIC        IP
+  B:0098H.0       PUBLIC        RI
+  D:000CH         PUBLIC        Anm
+  D:00D8H         PUBLIC        CCON
+  C:B546H         PUBLIC        main
+  D:000EH         PUBLIC        Rec_count
+  C:B426H         PUBLIC        Segs_tab
+  D:0099H         PUBLIC        SBUF
+  D:0098H         PUBLIC        SCON
+  D:0089H         PUBLIC        TMOD
+  D:0088H         PUBLIC        TCON
+  I:0010H         PUBLIC        Rec_buf
+  D:008EH         PUBLIC        AUXR
+  D:00C7H         PUBLIC        IAP_CONTR
+  B:00A8H.1       PUBLIC        ET0
+  B:0088H.5       PUBLIC        TF0
+  B:00A8H.3       PUBLIC        ET1
+  B:0088H.7       PUBLIC        TF1
+  D:008CH         PUBLIC        TH0
+  C:B649H         PUBLIC        Display_delay
+  D:008DH         PUBLIC        TH1
+  B:0088H.0       PUBLIC        IT0
+  B:00A8H.0       PUBLIC        EX0
+  D:000FH         PUBLIC        Anm1
+  D:00D6H         PUBLIC        T2H
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  01/18/2019  12:07:22  PAGE 3
+
+
+  D:008AH         PUBLIC        TL0
+  D:008BH         PUBLIC        TL1
+  D:00D7H         PUBLIC        T2L
+  B:0088H.4       PUBLIC        TR0
+  B:0088H.6       PUBLIC        TR1
+  C:B594H         PUBLIC        IO_Interrupt_UART_Init
+  D:00D0H         PUBLIC        PSW
+  D:0094H         PUBLIC        P0M0
+  -------         PROC          MAIN
+  C:B546H         LINE#         7229
+  C:B546H         LINE#         7230
+  C:B546H         LINE#         7232
+  C:B54CH         LINE#         7233
+  C:B54FH         LINE#         7234
+  C:B54FH         LINE#         7235
+  C:B54FH         LINE#         7236
+  C:B55FH         LINE#         7238
+  C:B567H         LINE#         7239
+  C:B56FH         LINE#         7240
+  C:B56FH         LINE#         7241
+  C:B58AH         LINE#         7242
+  -------         ENDPROC       MAIN
+  -------         PROC          IO_INTERRUPT_UART_INIT
+  C:B594H         LINE#         7247
+  C:B594H         LINE#         7248
+  C:B594H         LINE#         7249
+  C:B597H         LINE#         7250
+  C:B599H         LINE#         7251
+  C:B59BH         LINE#         7252
+  C:B59EH         LINE#         7254
+  C:B5A0H         LINE#         7255
+  C:B5A2H         LINE#         7256
+  C:B5A4H         LINE#         7257
+  C:B5A6H         LINE#         7258
+  C:B5A8H         LINE#         7259
+  C:B5AAH         LINE#         7261
+  C:B5ADH         LINE#         7262
+  C:B5B0H         LINE#         7263
+  C:B5B3H         LINE#         7264
+  C:B5B6H         LINE#         7265
+  C:B5B8H         LINE#         7266
+  C:B5BAH         LINE#         7268
+  C:B5BDH         LINE#         7269
+  C:B5C0H         LINE#         7270
+  C:B5C2H         LINE#         7271
+  C:B5C5H         LINE#         7272
+  C:B5C7H         LINE#         7273
+  C:B5C9H         LINE#         7275
+  C:B5CCH         LINE#         7276
+  C:B5CFH         LINE#         7277
+  C:B5D2H         LINE#         7278
+  C:B5D5H         LINE#         7279
+  C:B5D8H         LINE#         7280
+  -------         ENDPROC       IO_INTERRUPT_UART_INIT
+  -------         PROC          BUTTON
+  C:B5D9H         LINE#         7282
+  C:B5E4H         LINE#         7284
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  01/18/2019  12:07:22  PAGE 4
+
+
+  C:B5E6H         LINE#         7285
+  C:B5EFH         LINE#         7286
+  C:B5EFH         LINE#         7287
+  C:B5F2H         LINE#         7288
+  C:B5F4H         LINE#         7289
+  C:B5F6H         LINE#         7290
+  C:B5FAH         LINE#         7291
+  C:B5FCH         LINE#         7292
+  C:B5FCH         LINE#         7293
+  C:B60AH         LINE#         7294
+  -------         ENDPROC       BUTTON
+  -------         PROC          DISPLAY_DELAY
+  C:B649H         LINE#         7295
+  C:B64DH         LINE#         7297
+  C:B64FH         LINE#         7298
+  C:B651H         LINE#         7299
+  C:B65FH         LINE#         7300
+  C:B662H         LINE#         7301
+  C:B665H         LINE#         7302
+  C:B667H         LINE#         7303
+  -------         ENDPROC       DISPLAY_DELAY
+  -------         PROC          LED_DISPLAY
+  C:B66CH         LINE#         7304
+  C:B670H         LINE#         7306
+  C:B672H         LINE#         7307
+  C:B674H         LINE#         7308
+  C:B67AH         LINE#         7309
+  C:B67AH         LINE#         7310
+  C:B67CH         LINE#         7311
+  C:B687H         LINE#         7312
+  C:B687H         LINE#         7313
+  C:B689H         LINE#         7314
+  -------         ENDPROC       LED_DISPLAY
+  -------         PROC          UART_RECEIVE
+  -------         DO            
+  D:0007H         SYMBOL        ch
+  -------         ENDDO         
+  C:B613H         LINE#         7315
+  C:B61EH         LINE#         7318
+  C:B620H         LINE#         7319
+  C:B623H         LINE#         7320
+  C:B623H         LINE#         7321
+  C:B625H         LINE#         7322
+  C:B62CH         LINE#         7323
+  C:B62EH         LINE#         7324
+  C:B63CH         LINE#         7325
+  C:B63CH         LINE#         7326
+  C:B63EH         LINE#         7327
+  C:B640H         LINE#         7328
+  -------         ENDPROC       UART_RECEIVE
+  -------         ENDMOD        CUBE888_1
+
+Program Size: data=81.0 xdata=0 code=46711
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
